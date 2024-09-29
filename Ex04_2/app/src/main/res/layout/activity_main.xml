@@ -28,7 +28,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/edtten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -49,7 +49,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/edtchieucao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -70,7 +70,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/edtcannang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -79,7 +79,7 @@
     </TableRow>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnBMI"
         android:layout_width="388dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#48797070"
@@ -101,7 +101,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/edtBMI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -122,7 +122,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/edtChuanDoan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
