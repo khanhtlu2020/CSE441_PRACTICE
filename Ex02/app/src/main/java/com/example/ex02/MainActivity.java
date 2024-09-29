@@ -2,6 +2,9 @@ package com.example.ex02;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
+import android.view.View;
+import android.content.Intent;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent1 = new Intent(MainActivity.this,subactivity.class);
+                Intent intent1 = new Intent(MainActivity.this,Subactivity.class);
                 startActivity(intent1);
             }
         });
