@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 int b = Integer.parseInt("0"+edt2.getText());
 
                 // TODO Auto-generated method stub
-                edt3.setText("a + b =" +(a+b));
+                edt3.setText("a + b = " +(a+b));
             }
         });
         btntru.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 int a = Integer.parseInt("0"+edt1.getText());
                 int b = Integer.parseInt("0"+edt2.getText());
                 // TODO Auto-generated method stub
-                edt3.setText("a - b =" +(a-b));
+                edt3.setText("a - b = " +(a-b));
             }
         });
         btnnhan.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 int a = Integer.parseInt("0"+edt1.getText());
                 int b = Integer.parseInt("0"+edt2.getText());
                 // TODO Auto-generated method stub
-                edt3.setText("a * b =" +(a*b));
+                edt3.setText("a * b = " +(a*b));
             }
         });
         btnchia.setOnClickListener(new  View.OnClickListener() {
@@ -64,7 +64,9 @@ public class MainActivity extends AppCompatActivity {
                     edt3.setText("B phai khac 0");
                 }
                 else {
-                    edt3.setText("a / b =" +(a/b));
+                    float ketqua = (float) a / b;
+                    // edt3.setText("a / b =" +(a/b));
+                    edt3.setText("a / b = " + ketqua);
                 }
             }
         });
