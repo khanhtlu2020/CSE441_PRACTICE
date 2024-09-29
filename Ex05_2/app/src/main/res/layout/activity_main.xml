@@ -35,7 +35,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/edta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -55,7 +55,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/edtb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -75,7 +75,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/edtc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -88,19 +88,19 @@
         android:layout_height="match_parent" >
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btntieptuc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tiếp tục" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btngiaipt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Giải PT" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnthoat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thoát" />
@@ -111,7 +111,7 @@
         android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtkq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_span="3"
