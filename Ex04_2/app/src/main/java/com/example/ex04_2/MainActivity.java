@@ -1,6 +1,11 @@
 package com.example.ex04_2;
 
 import android.os.Bundle;
+import java.text.DecimalFormat;
+import android.app.Activity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
