@@ -31,6 +31,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#3C4CAF50"
             android:text="Nhập a:"
             android:textSize="20sp" />
 
@@ -51,6 +52,7 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#3C4CAF50"
             android:text="Nhập b:"
             android:textSize="20sp" />
 
@@ -71,6 +73,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#3C4CAF50"
             android:text="Nhập c:"
             android:textSize="20sp" />
 
@@ -91,19 +94,28 @@
             android:id="@+id/btntieptuc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tiếp tục" />
+            android:backgroundTint="#31595757"
+            android:text="Tiếp tục"
+            android:textColor="@color/black"
+            app:cornerRadius="5dp" />
 
         <Button
             android:id="@+id/btngiaipt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Giải PT" />
+            android:backgroundTint="#31595757"
+            android:text="Giải PT"
+            android:textColor="@color/black"
+            app:cornerRadius="5dp" />
 
         <Button
             android:id="@+id/btnthoat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thoát" />
+            android:backgroundTint="#31595757"
+            android:text="Thoát"
+            android:textColor="@color/black"
+            app:cornerRadius="5dp" />
     </TableRow>
 
     <TableRow
@@ -116,6 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_span="3"
             android:background="#4CAF50"
+            android:textColor="@color/white"
             android:textSize="20sp" />
     </TableRow>
 </TableLayout>
