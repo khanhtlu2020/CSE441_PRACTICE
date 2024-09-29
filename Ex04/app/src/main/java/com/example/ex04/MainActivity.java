@@ -7,23 +7,18 @@ import android.widget.Button;
 import android.view.View;
 import java.text.DecimalFormat;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 public class MainActivity extends Activity {
 EditText edtdoC,edtdoF;
-Button btncf,btnfc;
+Button btncf,btnfc,btncl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edtdoC = findViewById(R.id.txtCel);
-        edtdoF = findViewById(R.id.txtFar);
-        btncf = findViewById(R.id.btnFar);
-        btnfc = findViewById(R.id.btnCel);
+        edtdoC = findViewById(R.id.edtdoC);
+        edtdoF = findViewById(R.id.edtdoF);
+        btncf = findViewById(R.id.btncf);
+        btnfc = findViewById(R.id.btnfc);
+        btncl = findViewById(R.id.btncl);
         btncf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +37,13 @@ Button btncf,btnfc;
                 String doF = edtdoF.getText()+"";
                 int F=Integer.parseInt(doF);
                 edtdoC.setText(""+dcf.format((F-32)/1.8));
+            }
+        });
+        btncl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edtdoC.setText("");
+                edtdoF.setText("");
             }
         });
     }
