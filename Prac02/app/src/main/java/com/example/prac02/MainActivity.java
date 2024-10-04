@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 Staff newStaff = new Staff(staffId, fullName, birthDate, salary);
                 staffViewModel.addStaff(newStaff);
 
-                
+
                 staffIdInput.setText("");
                 fullNameInput.setText("");
                 birthDateInput.setText("");
