@@ -11,6 +11,17 @@ public class Full_name implements Serializable {
         this.midd = midd;
     }
 
+    public Full_name(String name) {
+        String[] array = name.split(" ");
+        this.first = array[array.length-1];
+        this.last = array[0];
+        String midd = "";
+        for (int i = 1; i < array.length-1; i++) {
+            midd+=array[i];
+        }
+        this.midd = midd;
+    }
+
     public String getFirst() {
         return first;
     }
@@ -40,4 +51,3 @@ public class Full_name implements Serializable {
         return last+" "+midd+" "+first;
     }
 }
-

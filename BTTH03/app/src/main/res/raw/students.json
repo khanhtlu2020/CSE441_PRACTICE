@@ -1,6 +1,6 @@
 [
   {
-    "id": "B2151173781",
+    "id": "B27DCCN100",
     "full_name": {
       "first": "Hoa",
       "last": "Mai",
@@ -13,5 +13,65 @@
     "major": "CNTT",
     "gpa": 3.25,
     "year": 2
+  },
+  {
+    "id": "B27DCCN101",
+    "full_name": {
+      "first": "Linh",
+      "last": "Nguyễn Ngọc",
+      "midd": "Mỹ"
+    },
+    "gender": "Nữ",
+    "birth_date": "05/10/2008",
+    "email": "mylinh@gmail.com",
+    "address": "Hà Nội",
+    "major": "KT",
+    "gpa": 3.75,
+    "year": 3
+  },
+  {
+    "id": "B27DCCN102",
+    "full_name": {
+      "first": "Minh",
+      "last": "Hoàng",
+      "midd": "Đức"
+    },
+    "gender": "Nam",
+    "birth_date": "10/10/2010",
+    "email": "ducminh@gmail.com",
+    "address": "Nam Định",
+    "major": "QTKD",
+    "gpa": 3.37,
+    "year": 1
+  },
+  {
+    "id": "B27DCCN103",
+    "full_name": {
+      "first": "Khang",
+      "last": "Huỳnh",
+      "midd": "Nguyên"
+    },
+    "gender": "Nam",
+    "birth_date": "08/12/2009",
+    "email": "nguyenkhang@gmail.com",
+    "address": "Hải Dương",
+    "major": "TMDT",
+    "gpa": 3.28,
+    "year": 2
+  },
+  {
+    "id": "B27DCCN104",
+    "full_name": {
+      "first": "Mai",
+      "last": "Nguyễn Thị",
+      "midd": "Ngọc"
+    },
+    "gender": "Nữ",
+    "birth_date": "19/02/2010",
+    "email": "ngocmai@gmail.com",
+    "address": "Hải Phòng",
+    "major": "KT",
+    "gpa": 3.45,
+    "year": 1
   }
 ]

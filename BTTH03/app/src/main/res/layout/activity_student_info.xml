@@ -5,15 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentInfoActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".StudentInfoActivity">
+
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thông tin sinh viên"
         android:layout_centerHorizontal="true"
-        android:textSize="28sp"/>
+        android:text="Thông tin sinh viên"
+        android:textSize="25sp" />
 
     <ImageView
         android:id="@+id/img"
@@ -23,115 +24,125 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:src="@drawable/ic_male" />
+
     <View
+        android:id="@+id/border"
         android:layout_width="330dp"
         android:layout_height="1dp"
-        android:layout_centerHorizontal="true"
-        android:background="#C7C6C6"
-        android:layout_marginTop="16dp"
         android:layout_below="@+id/img"
-        android:id="@+id/border"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_id"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/border"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        android:textColor="#FB4235"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_name"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_id"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        android:textColor="#FB4235"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_birth_date"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_name"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_address"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_birth_date"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_gender"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_address"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_email"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_gender"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_major"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_email"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_gpa"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_major"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        android:textColor="#FB4235"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_year"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="fjsidfisodj"
-        android:layout_below="@+id/tv_gpa"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#C7C6C6" />
 
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/border"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textColor="#FB4235"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_id"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textColor="#FB4235"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_birth_date"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_gender"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_email"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_major"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textColor="#FB4235"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_gpa"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:text="fjsidfisodj"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="delete" />
 </RelativeLayout>
