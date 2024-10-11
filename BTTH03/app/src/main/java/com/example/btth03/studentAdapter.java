@@ -1,5 +1,7 @@
 package com.example.btth03;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +13,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class studentAdapter extends RecyclerView.Adapter<studentAdapter.studentViewHoder>{
     private List<Student> students;
+    private Context context;
 
-    public studentAdapter(List<Student> students) {
+
+    public studentAdapter(List<Student> students, Context context) {
         this.students = students;
+        this.context = context;
     }
 
     @NonNull
@@ -37,6 +43,14 @@ public class studentAdapter extends RecyclerView.Adapter<studentAdapter.studentV
         holder.tv_id.setText(student.getId());
         holder.tv_name.setText(student.getFull_name().toString());
         holder.tv_gpa.setText(student.getGpa()+"");
+        holder.student.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,StudentInfoActivity.class);
+                i.putExtra("student_data", student);
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override

@@ -1,6 +1,8 @@
 package com.example.btth03;
 
-public class Full_name {
+import java.io.Serializable;
+
+public class Full_name implements Serializable {
     String first,last,midd;
 
     public Full_name(String first, String last, String midd) {
@@ -38,3 +40,4 @@ public class Full_name {
         return last+" "+midd+" "+first;
     }
 }
+

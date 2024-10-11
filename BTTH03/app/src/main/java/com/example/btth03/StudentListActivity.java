@@ -1,6 +1,7 @@
 package com.example.btth03;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +34,7 @@ public class StudentListActivity extends AppCompatActivity {
         rv = findViewById(R.id.rv);
         // set data for RecyclerView
         students = loadData();
-        studentAdapter adapter = new studentAdapter(students);
+        studentAdapter adapter = new studentAdapter(students,this);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
 
