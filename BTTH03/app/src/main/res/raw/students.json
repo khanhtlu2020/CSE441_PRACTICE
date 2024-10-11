@@ -1,0 +1,17 @@
+[
+  {
+    "id": "B2151173781",
+    "full_name": {
+      "first": "Hoa",
+      "last": "Mai",
+      "midd": "Thị"
+    },
+    "gender": "Nữ",
+    "birth_date": "10/10/2009",
+    "email": "hoamai@gmail.com",
+    "address": "Nghệ An",
+    "major": "CNTT",
+    "gpa": 3.25,
+    "year": 2
+  }
+]
