@@ -9,20 +9,20 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#B24CAF50"
+        android:background="#FFEB3B"
         android:gravity="center"
-        android:text="This is main Activity"
+        android:text="This is Child Activity"
         android:textAlignment="center"
-        android:textColor="#FFEB3B"
+        android:textColor="#B24CAF50"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Open Child Activity" />
+        android:text="Back to Main Activity" />
 </LinearLayout>
