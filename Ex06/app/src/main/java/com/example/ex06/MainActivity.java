@@ -1,18 +1,32 @@
 package com.example.ex06;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.EditText;
+import android.widget.CheckBox;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.widget.RadioGroup;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.RadioButton;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 public class MainActivity extends AppCompatActivity {
-    EditText edtten,editCMND,editBosung; CheckBox chkdocbao,chkdocsach,chkdoccode; Button btnsend;
+    EditText edtten,editCMND,editBosung;
+    CheckBox chkdocbao,chkdocsach,chkdoccode;
+    Button btnsend;
     RadioGroup group; @Override
-    protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main);
-        edtten = findViewById(R.id.edtten); editCMND = findViewById(R.id.edtcmnd); editBosung = findViewById(R.id.edtbosung); chkdocbao = findViewById(R.id.chkdocbao); chkdoccode = findViewById(R.id.chkcode); chkdocsach = findViewById(R.id.chkdocsach); btnsend = findViewById(R.id.btnsend);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        edtten = findViewById(R.id.edtHoten);
+        editCMND = findViewById(R.id.edtCMND);
+        editBosung = findViewById(R.id.editBosung);
+        chkdocbao = findViewById(R.id.chkdocbao);
+        chkdoccode = findViewById(R.id.chkcoding);
+        chkdocsach = findViewById(R.id.chkdocsach);
+        btnsend = findViewById(R.id.btnguitt);
         btnsend.setOnClickListener(new View.OnClickListener() { @Override
         public void onClick(View arg0) {
 // TODO Auto-generated method stub
@@ -40,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
 //Kiểm tra bằng cấp
         String bang="";
-        group = findViewById(R.id.idgruop);
+        group = findViewById(R.id.idgroup);
         int id=group.getCheckedRadioButtonId();// Trả về Id
         if(id==-1)
         {
@@ -52,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
         RadioButton rad= findViewById(id); bang=rad.getText()+"";
 //Kiểm tra sở thích
         String sothich="";
-        if(chkdocbao.isChecked()) sothich+=chkdocbao.getText()+"\n";
-        if(chkdocsach.isChecked()) sothich+=chkdocsach.getText()+"\n";
-        if(chkdoccode.isChecked()) sothich+=chkdoccode.getText()+"\n";
+        if(chkdocbao.isChecked()) sothich+=chkdocbao.getText()+"-";
+        if(chkdocsach.isChecked()) sothich+=chkdocsach.getText()+"-";
+        if(chkdoccode.isChecked()) sothich+=chkdoccode.getText();
         String bosung=editBosung.getText()+"";
 //Tạo Dialpg
         AlertDialog.Builder builder=new AlertDialog.Builder(this); builder.setTitle("Thông tin cá nhân"); builder.setPositiveButton("Đóng", new
@@ -66,7 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 //tạo nội dung String msg=ten+"\n"; msg+= cmnd+"\n"; msg+=bang+"\n"; msg+=sothich; msg+="—————————–\n";
-        msg+="Thông tin bổ sung:\n"; msg+=bosung+ "\n"; msg+="—————————–";
+        String msg = "";
+        msg+=ten+ "\n";
+        msg+=cmnd+ "\n";
+        msg+=bang+ "\n";
+        msg+=sothich+ "\n";
+        msg+="————————————— \n";
+        msg+="Thông tin bổ sung: \n";
+        msg+=bosung+ "\n";
         builder.setMessage(msg);//thiết lập nội dung
         builder.create().show();//hiển thị Dialog
     }
@@ -92,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
-        dialog.cancel();
 
         b.create().show();
     }
