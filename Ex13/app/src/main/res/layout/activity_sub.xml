@@ -12,11 +12,17 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bạn đã chọn" />
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:text="Bạn đã chọn"
+        android:textColor="#2196F3"
+        android:textSize="34sp" />
 
     <TextView
         android:id="@+id/txt_subphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Điện thoại SamSung" />
+        android:gravity="center"
+        android:text="Điện thoại SamSung"
+        android:textSize="34sp" />
 </LinearLayout>
