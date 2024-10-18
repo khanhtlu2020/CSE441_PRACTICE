@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5sp"
+    app:cardCornerRadius="15sp"
+    android:layout_marginStart="5sp"
+    android:layout_marginEnd="5sp"
+    android:layout_marginTop="4sp"
+    android:layout_marginBottom="2sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10sp">
+
+        <TextView
+            android:id="@+id/list_item_hoten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_item_mssv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_item_hoten"
+            android:layout_marginStart="5sp"
+            android:layout_marginEnd="5sp"
+            android:singleLine="true"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/list_item_lop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_item_mssv"
+            android:layout_marginStart="5sp"
+            android:layout_marginEnd="5sp"
+            android:singleLine="true"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/list_item_diemtb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_item_lop"
+            android:layout_marginStart="5sp"
+            android:layout_marginEnd="5sp"
+            android:singleLine="true"
+            android:text="@string/app_name" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
