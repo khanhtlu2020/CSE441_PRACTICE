@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/phone"
-            android:id="@+id/btncall" />
+            android:id="@+id/btncallphone" />
     </LinearLayout>
 
     <Button
