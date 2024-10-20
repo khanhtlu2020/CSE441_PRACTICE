@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFEB3B"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <EditText
@@ -83,6 +84,7 @@
         android:textSize="20sp" />
 
     <ListView
+        android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
