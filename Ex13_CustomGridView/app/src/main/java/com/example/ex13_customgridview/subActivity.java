@@ -1,6 +1,9 @@
 package com.example.ex13_customgridview;
 
 import android.os.Bundle;
+import android.app.Activity;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,17 +11,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class subActivity extends AppCompatActivity {
-
-    @Override
+public class subActivity extends Activity {
+    private Bundle extra;
+    TextView txtname2;
+    ImageView img2; @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.childlayout);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        txtname2 = (TextView) findViewById(R.id.textView2);
+        img2 = (ImageView)findViewById(R.id.imageView2);
+        extra = getIntent().getExtras();
+        int position = extra.getInt("TITLE");
+        txtname2.setText(MainActivity.arrayName[position]);
+        img2.setImageResource(MainActivity.imageName[position]);
     }
 }
