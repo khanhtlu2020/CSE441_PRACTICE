@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TỔNG"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/btnclear"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="CLEAR"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
     <TextView
