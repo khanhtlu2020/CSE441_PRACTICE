@@ -16,14 +16,16 @@
         app:srcCompat="@drawable/mymusic" />
 
     <ImageButton
+        android:layout_gravity="center"
         android:id="@+id/btnplay"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/play" />
 
     <ImageButton
+        android:layout_gravity="center"
         android:id="@+id/btnstop"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/stop" />
 </LinearLayout>
