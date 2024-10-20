@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    useLibrary("org.apache.http.legacy")
     namespace = "com.example.ex22"
     compileSdk = 34
 
@@ -14,6 +15,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
