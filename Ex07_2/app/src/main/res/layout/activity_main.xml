@@ -12,8 +12,11 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#4CAF50"
         android:text="Giải phương trình bậc 1"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nhập a:" />
+            android:text="Nhập a:"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edtA"
@@ -33,7 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -46,7 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nhập b:" />
+            android:text="Nhập b:"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edtB"
@@ -54,7 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Button
@@ -62,5 +69,6 @@
         android:layout_width="158dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Kết quả" />
+        android:text="Kết quả"
+        android:textSize="20sp" />
 </LinearLayout>
