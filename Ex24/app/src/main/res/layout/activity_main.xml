@@ -8,6 +8,26 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E28BC34A"
+        android:text="TỈ GIÁ HỐI ĐOÁI ĐÔNG Á BANK"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E28BC34A"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="20sp" />
+
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"

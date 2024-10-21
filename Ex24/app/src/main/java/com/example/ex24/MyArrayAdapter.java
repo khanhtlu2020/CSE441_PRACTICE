@@ -36,7 +36,7 @@ public class MyArrayAdapter extends ArrayAdapter<Tygia> {
         imgHinh.setImageBitmap(tygia.getBitmap());
         txtType.setText(tygia.getType());
         txtMuaTM.setText(tygia.getMuatienmat());
-        txtBanTM.setText(tygia.getBantuenmat());
+        txtBanTM.setText(tygia.getBantienmat());
         txtMuaCK.setText(tygia.getMuack());
         txtBanCK.setText(tygia.getBanck());
 

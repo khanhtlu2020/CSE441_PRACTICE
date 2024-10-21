@@ -8,7 +8,7 @@ public class Tygia {
     private Bitmap bitmap;
     private String muatienmat;
     private String muack;
-    private String bantuenmat;
+    private String bantienmat;
     private String banck;
 
     public Tygia() {
@@ -19,7 +19,7 @@ public class Tygia {
         this.bitmap = bitmap;
         this.muatienmat = muatienmat;
         this.muack = muack;
-        this.bantuenmat = bantuenmat;
+        this.bantienmat = bantuenmat;
         this.banck = banck;
     }
 
@@ -40,8 +40,8 @@ public class Tygia {
         return muack;
     }
 
-    public String getBantuenmat() {
-        return bantuenmat;
+    public String getBantienmat() {
+        return bantienmat;
     }
     public String getBanck() {
         return banck;
@@ -63,8 +63,8 @@ public class Tygia {
     public void setMuack(String muack) {
         this.muack = muack;
     }
-    public void setBantuenmat(String bantuenmat) {
-        this.bantuenmat = bantuenmat;
+    public void setBantienmat(String bantuenmat) {
+        this.bantienmat = bantuenmat;
     }
     public void setBanck(String banck) {
 

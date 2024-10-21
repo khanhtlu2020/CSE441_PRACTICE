@@ -10,7 +10,7 @@
 
         <ImageView
             android:id="@+id/imgHinh"
-            android:layout_width="wrap_content"
+            android:layout_width="78dp"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
@@ -19,22 +19,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MuaTM: "
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtMuaTM"
-            android:layout_width="wrap_content"
+            android:layout_width="89dp"
             android:layout_height="wrap_content"
             android:text="16220"
             android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BanTM: "
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtBanTM"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:text="16370"
             android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </TableRow>
 
     <TableRow
@@ -54,15 +54,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="USD"
+            android:textAlignment="center"
             android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MuaCK: "
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtMuaCK"
@@ -70,14 +71,14 @@
             android:layout_height="wrap_content"
             android:text="22920"
             android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BanCK: "
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtBanCK"
@@ -85,6 +86,6 @@
             android:layout_height="wrap_content"
             android:text="23170"
             android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </TableRow>
 </TableLayout>
