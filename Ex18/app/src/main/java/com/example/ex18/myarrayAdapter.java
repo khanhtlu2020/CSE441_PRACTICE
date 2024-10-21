@@ -84,7 +84,7 @@ public class myarrayAdapter extends ArrayAdapter<Item> {
                 tieude.setTextColor(Color.RED);
                 maso.setTextColor(Color.RED);
 
-                Intent intent1 = new Intent(context, ActivitySub.class);
+                Intent intent1 = new Intent(context, activitysub.class);
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("maso", maso.getText().toString());
                 intent1.putExtra("package", bundle1);
