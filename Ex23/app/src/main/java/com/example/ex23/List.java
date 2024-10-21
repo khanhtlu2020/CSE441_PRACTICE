@@ -5,9 +5,11 @@ import android.graphics.Bitmap;
 public class List {
 
     private Bitmap img;
-    private String title, info, link;
+    private String title;
+    private String info;
+    private String link;
 
-    //Có thể xây dựng Constructer để thêm dữ liệu cho nhanh
+    // Constructor để khởi tạo đối tượng List
     public List(Bitmap img, String title, String info, String link) {
         this.img = img;
         this.title = title;
@@ -15,6 +17,7 @@ public class List {
         this.link = link;
     }
 
+    // Getter và Setter
     public String getInfo() {
         return info;
     }
@@ -47,3 +50,4 @@ public class List {
         this.title = title;
     }
 }
+

@@ -1,38 +1,59 @@
 package com.example.ex23;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class XMLParser {
-    public String getXmlFromUrl(String url) {
-        String xml = null;
+    public String getXmlFromUrl(String urlString) {
+        StringBuilder xml = new StringBuilder();
+        HttpURLConnection urlConnection = null;
+        BufferedReader reader = null;
+
         try {
-            // Tạo đối tượng Client và tạo Http Connection
-            DefaultHttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(url);
+            // Tạo URL từ chuỗi URL
+            URL url = new URL(urlString);
 
-            // Tiến hành Request lên server và nhận đáp ứng Response
-            HttpResponse httpResponse = httpClient.execute(httpPost);
+            // Mở kết nối
+            urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            urlConnection.setConnectTimeout(10000); // 10 giây timeout cho kết nối
+            urlConnection.setReadTimeout(15000);    // 15 giây timeout cho đọc dữ liệu
+            urlConnection.connect();
 
-            // Lấy các Thực thể trong đáp ứng Response chuyển qua kiểu String và gắn vào file xml
-            HttpEntity httpEntity = httpResponse.getEntity();
-            xml = EntityUtils.toString(httpEntity);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
+            // Kiểm tra nếu phản hồi là OK (HTTP 200)
+            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                InputStream inputStream = urlConnection.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(inputStream));
+
+                // Đọc dữ liệu từ InputStream
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    xml.append(line);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            // Đóng các kết nối và luồng
+            if (urlConnection != null) {
+                urlConnection.disconnect();
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
         // return XML
-        return xml;
+        return xml.toString();
     }
 }
+
+

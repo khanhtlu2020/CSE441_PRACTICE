@@ -27,28 +27,33 @@ public class MyArrayAdapter extends ArrayAdapter<List> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = context.getLayoutInflater();
-        convertView = inflater.inflate(layoutID, null);
+        // Tạo layout cho từng dòng của ListView
+        if (convertView == null) {
+            LayoutInflater inflater = context.getLayoutInflater();
+            convertView = inflater.inflate(layoutID, parent, false);
+        }
 
+        // Lấy đối tượng List tại vị trí hiện tại
         final List lst = arr.get(position);
-        ImageView imgitem = convertView.findViewById(R.id.imgView);
-        imgitem.setImageBitmap(lst.getImg());
+
+        // Ánh xạ các thành phần giao diện
+        ImageView imgItem = convertView.findViewById(R.id.imgView);
+        imgItem.setImageBitmap(lst.getImg());
 
         TextView txtTitle = convertView.findViewById(R.id.txtTitle);
-        txtTitle.setText(lst.getTitle().toString());
+        txtTitle.setText(lst.getTitle());
 
         TextView txtInfo = convertView.findViewById(R.id.txtInfo);
-        txtInfo.setText(lst.getInfo().toString());
+        txtInfo.setText(lst.getInfo());
 
-        MainActivity.lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(lst.getLink()));
-                context.startActivity(intent);
-            }
+        // Thiết lập sự kiện khi nhấn vào mỗi item trong ListView
+        convertView.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(lst.getLink()));
+            context.startActivity(intent);
         });
 
         return convertView;
     }
 }
+
 
