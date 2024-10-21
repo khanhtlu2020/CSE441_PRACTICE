@@ -2,6 +2,7 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:stretchColumns="*"
     android:layout_height="match_parent" >
 
     <TableRow
@@ -12,13 +13,16 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="#" />
+            android:text="#"
+            android:textAlignment="viewEnd"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txtmaso1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã số" />
+            android:text="Mã số"
+            android:textSize="24sp" />
     </TableRow>
 
     <TableRow
@@ -29,13 +33,18 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên bài hát:" />
+            android:text="Tên bài hát:"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txtbaihat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CHÉN ĐẮNG (REMIX)" />
+            android:text="CHÉN ĐẮNG (REMIX)"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </TableRow>
 
     <TableRow
@@ -46,13 +55,17 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lời bài hát:" />
+            android:text="Lời bài hát:"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txtloibaihat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Một ngày anh nhớ,..." />
+            android:text="Một ngày anh nhớ,..."
+            android:textColor="#4CAF50"
+            android:textSize="24sp" />
     </TableRow>
 
     <TableRow
@@ -63,13 +76,17 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tác giả:" />
+            android:text="Tác giả:"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txttacgia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trương Lê Sơn" />
+            android:text="Trương Lê Sơn"
+            android:textColor="#4CAF50"
+            android:textSize="24sp" />
     </TableRow>
 
     <TableRow
@@ -80,7 +97,9 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yêu Thích:" />
+            android:text="Yêu Thích:"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
 
         <FrameLayout
             android:layout_width="match_parent"
