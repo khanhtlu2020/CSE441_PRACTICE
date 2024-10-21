@@ -1,129 +1,113 @@
 package com.example.ex22;
 
-import android.app.Activity;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     Button btnparse;
     ListView lv1;
     ArrayAdapter<String> myadapter;
     ArrayList<String> mylist;
-    String URL = "https://api.androidhive.info/pizza/?format=xml";
+    String URL = "https://randomuser.me/api/?format=xml";
+    ExecutorService executorService;
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnparse = (Button) findViewById(R.id.btnparse);
-        lv1 = (ListView) findViewById(R.id.lv1);
+        btnparse = findViewById(R.id.btnparse);
+        lv1 = findViewById(R.id.lv1);
 
         mylist = new ArrayList<>();
-        myadapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, mylist);
+        myadapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mylist);
         lv1.setAdapter(myadapter);
 
-        btnparse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoadExampleTask task = new LoadExampleTask();
-                task.execute();
-            }
+        executorService = Executors.newSingleThreadExecutor();
+        handler = new Handler(Looper.getMainLooper());
+
+        btnparse.setOnClickListener(v -> {
+            // Sử dụng ExecutorService để chạy tác vụ trong nền
+            executorService.execute(() -> {
+                ArrayList<String> result = loadXmlFromUrl();
+                // Cập nhật giao diện người dùng trên luồng chính sau khi xử lý xong
+                handler.post(() -> {
+                    myadapter.clear();
+                    myadapter.addAll(result);
+                });
+            });
         });
     }
 
-    class LoadExampleTask extends AsyncTask<Void, Void, ArrayList<String>> {
+    private ArrayList<String> loadXmlFromUrl() {
+        ArrayList<String> list = new ArrayList<>();
+        try {
+            // Tạo đối tượng Parser để chứa dữ liệu từ file XML
+            XmlPullParserFactory fc = XmlPullParserFactory.newInstance();
+            XmlPullParser parser = fc.newPullParser();
 
-        @Override
-        protected ArrayList<String> doInBackground(Void... voids) {
-            ArrayList<String> list = new ArrayList<String>();
-            try {
-                // Tạo đối tượng Parser để chứa dữ liệu từ file XML
-                XmlPullParserFactory fc = XmlPullParserFactory.newInstance();
-                XmlPullParser parser = fc.newPullParser();
+            // Tạo mới và gọi đến phương thức getXmlFromUrl(URL)
+            XMLParser myparser = new XMLParser();
+            String xml = myparser.getXmlFromUrl(URL); // getting XML from URL
 
-                // Tạo mới và gọi đến phương thức getXmlFromUrl(URL)
-                XMLParser myparser = new XMLParser();
-                String xml = myparser.getXmlFromUrl(URL); // getting XML from URL
+            // Copy dữ liệu từ String xml vào đối tượng parser
+            parser.setInput(new StringReader(xml));
 
-                // Copy dữ liệu từ String xml vào đối tượng parser
-                parser.setInput(new StringReader(xml));
+            // Bắt đầu duyệt parser
+            int eventType = -1;
+            String nodeName;
+            String datashow = "";
 
-                // Bắt đầu duyệt parser
-                int eventType = -1;
-                String nodeName;
-                String datashow = "";
-
-                while (eventType != XmlPullParser.END_DOCUMENT) {
-                    eventType = parser.next();
-                    switch (eventType) {
-                        case XmlPullParser.START_DOCUMENT:
-                            break;
-                        case XmlPullParser.END_DOCUMENT:
-                            break;
-                        case XmlPullParser.START_TAG:
-                            nodeName = parser.getName();
-                            if (nodeName.equals("id")) {
-                                datashow += parser.nextText() + "-";
-                            } else if (nodeName.equals("name")) {
-                                datashow += parser.nextText();
-                            }
-                            break;
-                        case XmlPullParser.END_TAG:
-                            nodeName = parser.getName();
-                            if (nodeName.equals("item")) {
-                                list.add(datashow);
-                                datashow = "";
-                            }
-                            break;
-                    }
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                eventType = parser.next();
+                switch (eventType) {
+                    case XmlPullParser.START_TAG:
+                        nodeName = parser.getName();
+                        if (nodeName.equals("title")) {
+                            datashow += parser.nextText() + " ";
+                        } else if (nodeName.equals("first")) {
+                            datashow += parser.nextText() + " ";
+                        } else if (nodeName.equals("last")) {
+                            datashow += parser.nextText() + "\n";
+                        } else if (nodeName.equals("gender")) {
+                            datashow += "Gender: " + parser.nextText() + "\n";
+                        } else if (nodeName.equals("email")) {
+                            datashow += "Email: " + parser.nextText() + "\n";
+                        }
+                        break;
+                    case XmlPullParser.END_TAG:
+                        nodeName = parser.getName();
+                        if (nodeName.equals("user")) {
+                            list.add(datashow);
+                            datashow = "";
+                        }
+                        break;
                 }
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-            return list;
-        }
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            myadapter.clear();
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
         }
-
-        @Override
-        protected void onPostExecute(ArrayList<String> result) {
-            super.onPostExecute(result);
-            myadapter.clear();
-            myadapter.addAll(result);
-        }
-
-        @Override
-        protected void onProgressUpdate(Void... values) {
-            super.onProgressUpdate(values);
-        }
+        return list;
     }
 }
+
