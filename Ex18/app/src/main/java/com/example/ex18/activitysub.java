@@ -1,5 +1,15 @@
 package com.example.ex18;
 
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 public class activitysub extends AppCompatActivity {
     TextView txtMaso, txtBaiHat, txtLoiBaiHat, txtTacGia;
     ImageButton btnThich, btnKhongThich;
