@@ -24,6 +24,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseApp.initializeApp(MainActivity.this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         FloatingActionButton add = findViewById(R.id.addStudent);
         add.setOnClickListener(new View.OnClickListener() {
