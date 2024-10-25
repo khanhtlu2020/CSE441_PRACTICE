@@ -21,7 +21,7 @@
         <!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
         <!--            android:title="Cafe" />-->
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_tradacbiet"
+            android:id="@+id/toolbar_banhngot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#3F51B5"
@@ -30,7 +30,7 @@
             app:title="Nước trái cây" />
 
         <TextView
-            android:id="@+id/textView_tradacbiet"
+            android:id="@+id/textView_banhngot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Danh sách món"

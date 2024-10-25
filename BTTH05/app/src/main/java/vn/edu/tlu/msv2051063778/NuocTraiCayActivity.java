@@ -36,7 +36,7 @@ public class NuocTraiCayActivity extends AppCompatActivity implements Navigation
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuoc_trai_cay);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_tradacbiet);
+        Toolbar toolbar = findViewById(R.id.toolbar_banhngot);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout_tradacbiet);
