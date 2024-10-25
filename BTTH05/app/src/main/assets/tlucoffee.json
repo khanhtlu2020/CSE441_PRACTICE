@@ -45,44 +45,87 @@
   "nuoctraicay":
   [
     {
-      "MaMon": "6",
+      "MaMon": "1",
       "TenMon": "Nước chanh",
       "MaLoai": "2",
-      "MoTa": "Nước chanh",
+      "MoTa": "Nước chanh đá",
       "DonGia": "25000",
       "Hinh": "nuocchanh"
     },
     {
-      "MaMon": "7",
+      "MaMon": "2",
       "TenMon": "Nước chanh leo",
       "MaLoai": "2",
-      "MoTa": "Nước chanh leo",
+      "MoTa": "Nước chanh leo đá",
       "DonGia": "25000",
       "Hinh": "nuocchanhleo"
     },
     {
-      "MaMon": "8",
+      "MaMon": "3",
       "TenMon": "Nước cam",
       "MaLoai": "2",
-      "MoTa": "Nước cam",
+      "MoTa": "Nước cam đá",
       "DonGia": "30000",
       "Hinh": "nuoccam"
     },
     {
-      "MaMon": "9",
+      "MaMon": "4",
       "TenMon": "Nước ép táo",
       "MaLoai": "2",
-      "MoTa": "Nước ép táo",
+      "MoTa": "Nước ép táo đá",
       "DonGia": "30000",
       "Hinh": "nuoceptao"
     },
     {
-      "MaMon": "10",
+      "MaMon": "5",
       "TenMon": "Nước dứa",
       "MaLoai": "2",
-      "MoTa": "Nước dứa",
+      "MoTa": "Nước dứa đá",
       "DonGia": "30000",
       "Hinh": "nuocdua"
+    }
+  ],
+  "tradacbiet":
+  [
+    {
+      "MaMon": "1",
+      "TenMon": "Trà chanh",
+      "MaLoai": "3",
+      "MoTa": "Trà chanh đá",
+      "DonGia": "25000",
+      "Hinh": "trachanh"
+    },
+    {
+      "MaMon": "2",
+      "TenMon": "Trà đào",
+      "MaLoai": "3",
+      "MoTa": "Trà đào đá",
+      "DonGia": "30000",
+      "Hinh": "tradao"
+    },
+    {
+      "MaMon": "3",
+      "TenMon": "Trà đào cam sả",
+      "MaLoai": "3",
+      "MoTa": "Trà đào cam sả đá",
+      "DonGia": "30000",
+      "Hinh": "tradaocamsa"
+    },
+    {
+      "MaMon": "4",
+      "TenMon": "Trà tắc",
+      "MaLoai": "3",
+      "MoTa": "Trà tắc đá",
+      "DonGia": "25000",
+      "Hinh": "tratac"
+    },
+    {
+      "MaMon": "5",
+      "TenMon": "Trà lipton",
+      "MaLoai": "3",
+      "MoTa": "Trà lipton nóng",
+      "DonGia": "20000",
+      "Hinh": "tralipton"
     }
   ]
 }
