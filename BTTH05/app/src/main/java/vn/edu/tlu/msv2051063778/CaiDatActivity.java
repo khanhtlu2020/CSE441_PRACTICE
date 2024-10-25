@@ -66,6 +66,7 @@ public class CaiDatActivity extends AppCompatActivity implements NavigationView.
 
 
     private void logout() {
-        // Xử lý đăng xuất tại đây
+        finishAffinity();
+        System.exit(0);
     }
 }

@@ -108,6 +108,7 @@ public class NuocTraiCayActivity extends AppCompatActivity implements Navigation
 
 
     private void logout() {
-        // Xử lý đăng xuất tại đây
+        finishAffinity();
+        System.exit(0);
     }
 }

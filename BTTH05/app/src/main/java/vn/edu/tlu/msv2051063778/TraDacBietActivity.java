@@ -108,6 +108,7 @@ public class TraDacBietActivity extends AppCompatActivity implements NavigationV
 
 
     private void logout() {
-        // Xử lý đăng xuất tại đây
+        finishAffinity();
+        System.exit(0);
     }
 }

@@ -28,9 +28,6 @@
             android:name=".NuocTraiCayActivity"
             android:exported="false" />
         <activity
-            android:name=".CafeActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
