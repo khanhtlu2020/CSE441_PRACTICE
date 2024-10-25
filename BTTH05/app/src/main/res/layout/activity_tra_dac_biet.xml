@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout_tradacbiet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TraDacBietActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         <!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
         <!--            android:title="Cafe" />-->
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_banhngot"
+            android:id="@+id/toolbar_tradacbiet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#3F51B5"
@@ -30,7 +30,7 @@
             app:title="Trà đặc biệt" />
 
         <TextView
-            android:id="@+id/textView_banhngot"
+            android:id="@+id/textView_tradacbiet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Danh sách món"

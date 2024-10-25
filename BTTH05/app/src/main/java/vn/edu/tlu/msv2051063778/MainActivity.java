@@ -36,18 +36,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_banhngot);
+        Toolbar toolbar = findViewById(R.id.toolbar_cafe);
         setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view_tradacbiet);
+        drawerLayout = findViewById(R.id.drawer_layout_cafe);
+        NavigationView navigationView = findViewById(R.id.nav_view_cafe);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        recyclerViewMon = findViewById(R.id.recyclerViewMon_tradacbiet);
+        recyclerViewMon = findViewById(R.id.recyclerViewMon_cafe);
         itemList = new ArrayList<>();
         loadItemsFromJson();
         recyclerViewMon.setLayoutManager(new LinearLayoutManager(this));

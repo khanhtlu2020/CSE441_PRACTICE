@@ -36,7 +36,7 @@ public class TraDacBietActivity extends AppCompatActivity implements NavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tra_dac_biet);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_banhngot);
+        Toolbar toolbar = findViewById(R.id.toolbar_tradacbiet);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout_tradacbiet);

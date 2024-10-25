@@ -36,18 +36,18 @@ public class NuocTraiCayActivity extends AppCompatActivity implements Navigation
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuoc_trai_cay);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_banhngot);
+        Toolbar toolbar = findViewById(R.id.toolbar_nuoctraicay);
         setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.drawer_layout_tradacbiet);
-        NavigationView navigationView = findViewById(R.id.nav_view_tradacbiet);
+        drawerLayout = findViewById(R.id.drawer_layout_nuoctraicay);
+        NavigationView navigationView = findViewById(R.id.nav_view_nuoctraicay);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        recyclerViewMon = findViewById(R.id.recyclerViewMon_tradacbiet);
+        recyclerViewMon = findViewById(R.id.recyclerViewMon_nuoctraicay);
         itemList = new ArrayList<>();
         loadItemsFromJson();
         recyclerViewMon.setLayoutManager(new LinearLayoutManager(this));

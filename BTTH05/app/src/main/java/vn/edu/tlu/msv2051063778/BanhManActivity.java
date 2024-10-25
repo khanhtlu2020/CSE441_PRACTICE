@@ -36,7 +36,7 @@ public class BanhManActivity extends AppCompatActivity implements NavigationView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banh_man);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_caidat);
+        Toolbar toolbar = findViewById(R.id.toolbar_banhman);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout_banhman);
