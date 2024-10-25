@@ -41,6 +41,49 @@
       "DonGia": "29000",
       "Hinh": "cafe_denda"
     }
+  ],
+  "nuoctraicay":
+  [
+    {
+      "MaMon": "6",
+      "TenMon": "Nước chanh",
+      "MaLoai": "2",
+      "MoTa": "Nước chanh",
+      "DonGia": "25000",
+      "Hinh": "nuocchanh"
+    },
+    {
+      "MaMon": "7",
+      "TenMon": "Nước chanh leo",
+      "MaLoai": "2",
+      "MoTa": "Nước chanh leo",
+      "DonGia": "25000",
+      "Hinh": "nuocchanhleo"
+    },
+    {
+      "MaMon": "8",
+      "TenMon": "Nước cam",
+      "MaLoai": "2",
+      "MoTa": "Nước cam",
+      "DonGia": "30000",
+      "Hinh": "nuoccam"
+    },
+    {
+      "MaMon": "9",
+      "TenMon": "Nước ép táo",
+      "MaLoai": "2",
+      "MoTa": "Nước ép táo",
+      "DonGia": "30000",
+      "Hinh": "nuoceptao"
+    },
+    {
+      "MaMon": "10",
+      "TenMon": "Nước dứa",
+      "MaLoai": "2",
+      "MoTa": "Nước dứa",
+      "DonGia": "30000",
+      "Hinh": "nuocdua"
+    }
   ]
 }
 

@@ -24,7 +24,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class NuocTraiCayActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     RecyclerView recyclerViewMon;
     ArrayList<Item> itemList;
@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_nuoc_trai_cay);
 
         Toolbar toolbar = findViewById(R.id.toolbar_nuoctraicay);
         setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout_nuoctraicay);
         NavigationView navigationView = findViewById(R.id.nav_view_nuoctraicay);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             InputStream inputStream = assetManager.open("tlucoffee.json");
             String jsonStr = convertStreamToString(inputStream);
             JSONObject jsonObj = new JSONObject(jsonStr);
-            JSONArray jsonArray = jsonObj.getJSONArray("mon");
+            JSONArray jsonArray = jsonObj.getJSONArray("nuoctraicay");
 
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject itemObj = jsonArray.getJSONObject(i);
@@ -87,9 +87,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_cafe) {
-            drawerLayout.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, MainActivity.class));
         } else if (id == R.id.nav_nuoc_trai_cay) {
-            startActivity(new Intent(this, NuocTraiCayActivity.class));
+            drawerLayout.closeDrawer(GravityCompat.START);
         } else if (id == R.id.nav_tra_dac_biet) {
             startActivity(new Intent(this, TraDacBietActivity.class));
         } else if (id == R.id.nav_banh_ngot) {
