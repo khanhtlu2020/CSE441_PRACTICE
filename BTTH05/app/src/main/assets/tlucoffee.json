@@ -134,7 +134,7 @@
       "MaMon": "1",
       "TenMon": "Bánh cuộn phô mai",
       "MaLoai": "4",
-      "MoTa": "Cốt bánh bông lan cuộn siêu mềm ẩm hoà quyện cùng mứt xoài thơm lừng và kem phomai tươi sánh mướt béo ngậy mềm tan.",
+      "MoTa": "Cốt bánh bông lan cuộn siêu mềm ẩm hoà quyện cùng mứt xoài thơm lừng và kem phomai tươi sánh mướt béo ngậy mềm tan",
       "DonGia": "55000",
       "Hinh": "banhcuonphomai"
     },
@@ -142,7 +142,7 @@
       "MaMon": "2",
       "TenMon": "Bánh crepe socola",
       "MaLoai": "4",
-      "MoTa": "Vỏ bánh crepe socola đen trắng hoà quyện cùng nhân kem phomai tươi béo ngậy.",
+      "MoTa": "Vỏ bánh crepe socola đen trắng hoà quyện cùng nhân kem phomai tươi béo ngậy",
       "DonGia": "75000",
       "Hinh": "banhcrepesocola"
     },
@@ -150,7 +150,7 @@
       "MaMon": "3",
       "TenMon": "Bánh opera",
       "MaLoai": "4",
-      "MoTa": "Bánh opera được làm bằng các lớp bánh bông lan quét vừa đủ lượng siro cafe, các lớp kem bơ và phủ chocolate chảy trên mỗi lớp kem bơ.",
+      "MoTa": "Bánh opera được làm bằng các lớp bánh bông lan quét vừa đủ lượng siro cafe, các lớp kem bơ và phủ chocolate chảy trên mỗi lớp kem bơ",
       "DonGia": "60000",
       "Hinh": "banhopera"
     },
@@ -166,9 +166,52 @@
       "MaMon": "5",
       "TenMon": "Bánh bông lan trứng muối",
       "MaLoai": "4",
-      "MoTa": "Bánh bông lan trứng muối ngon mê ly với vị mềm bông xốp, có mùi thơm nhẹ của cốt bánh, vị béo ngậy của xốt kem hòa quyện cùng vị mặn đặc trưng của trứng muối và chà bông.",
+      "MoTa": "Bánh bông lan trứng muối ngon mê ly với vị mềm bông xốp, có mùi thơm nhẹ của cốt bánh, vị béo ngậy của xốt kem hòa quyện cùng vị mặn đặc trưng của trứng muối và chà bông",
       "DonGia": "45000",
       "Hinh": "banhbonglantrungmuoi"
+    }
+  ],
+  "banhman":
+  [
+    {
+      "MaMon": "1",
+      "TenMon": "Bánh sandwich",
+      "MaLoai": "5",
+      "MoTa": "Bánh sandwich kẹp thịt",
+      "DonGia": "30000",
+      "Hinh": "banhsandwich"
+    },
+    {
+      "MaMon": "2",
+      "TenMon": "Bánh pizza",
+      "MaLoai": "5",
+      "MoTa": "Bánh pizza (1 miếng)",
+      "DonGia": "35000",
+      "Hinh": "banhpizza"
+    },
+    {
+      "MaMon": "3",
+      "TenMon": "Bánh mì",
+      "MaLoai": "5",
+      "MoTa": "Bánh mì kẹp thịt",
+      "DonGia": "20000",
+      "Hinh": "banhmi"
+    },
+    {
+      "MaMon": "4",
+      "TenMon": "Bánh pateso",
+      "MaLoai": "5",
+      "MoTa": "Bánh pateso nhân thịt",
+      "DonGia": "25000",
+      "Hinh": "banhpateso"
+    },
+    {
+      "MaMon": "5",
+      "TenMon": "Bánh bao",
+      "MaLoai": "5",
+      "MoTa": "Bánh bao có nhân",
+      "DonGia": "15000",
+      "Hinh": "banhbao"
     }
   ]
 }
