@@ -1,0 +1,49 @@
+{
+  "mon":
+  [
+    {
+      "MaMon": "1",
+      "TenMon": "AMERICANO",
+      "MaLoai": "1",
+      "MoTa": "Cà phê AMERICANO",
+      "DonGia": "49000",
+      "Hinh": "americano"
+    },
+    {
+      "MaMon": "2",
+      "TenMon": "CAPPUCCINO",
+      "MaLoai": "1",
+      "MoTa": "Cà phê CAPPUCCINO",
+      "DonGia": "45000",
+      "Hinh": "cappucino"
+    },
+    {
+      "MaMon": "3",
+      "TenMon": "ESPRESSO SỮA ĐÁ",
+      "MaLoai": "1",
+      "MoTa": "Cà phê ESPRESSO SỮA ĐÁ",
+      "DonGia": "39000",
+      "Hinh": "espresso_suada"
+    },
+    {
+      "MaMon": "4",
+      "TenMon": "MOCHA ĐÁ",
+      "MaLoai": "1",
+      "MoTa": "Cà phê MOCHA ĐÁ",
+      "DonGia": "49000",
+      "Hinh": "mocha_da"
+    },
+    {
+      "MaMon": "5",
+      "TenMon": "CAFE ĐEN ĐÁ",
+      "MaLoai": "1",
+      "MoTa": "Cà phê ĐEN ĐÁ",
+      "DonGia": "29000",
+      "Hinh": "cafe_denda"
+    }
+  ]
+}
+
+
+
+
