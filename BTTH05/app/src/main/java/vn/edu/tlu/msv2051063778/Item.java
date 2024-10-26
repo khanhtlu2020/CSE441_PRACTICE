@@ -5,11 +5,13 @@ public class Item {
     private String tenMon;
     private Double donGia;
     private String hinh;
-    public Item(String maMon, String tenMon, Double donGia, String hinh) {
+    private String moTa;
+    public Item(String maMon, String tenMon, Double donGia, String hinh, String moTa) {
         this.maMon = maMon;
         this.tenMon = tenMon;
         this.donGia = donGia;
         this.hinh = hinh;
+        this.moTa = moTa;
     }
 
 
@@ -44,6 +46,14 @@ public class Item {
 
     public void setHinh(String hinh) {
         this.hinh = hinh;
+    }
+
+    public String getMoTa() {
+        return moTa;
+    }
+
+    public void setMoTa(String moTa) {
+        this.moTa = moTa;
     }
 }
 

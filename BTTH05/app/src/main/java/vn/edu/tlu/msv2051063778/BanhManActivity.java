@@ -68,9 +68,10 @@ public class BanhManActivity extends AppCompatActivity implements NavigationView
                 String maMon = itemObj.getString("MaMon");
                 String tenMon = itemObj.getString("TenMon");
                 Double donGia = itemObj.getDouble("DonGia");
+                String moTa = itemObj.getString("MoTa");
                 String hinh = itemObj.getString("Hinh");
 
-                itemList.add(new Item(maMon, tenMon, donGia, hinh));
+                itemList.add(new Item(maMon, tenMon, donGia, hinh, moTa));
             }
         } catch (Exception e) {
             e.printStackTrace();

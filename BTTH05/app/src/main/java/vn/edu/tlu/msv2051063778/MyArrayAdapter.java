@@ -1,6 +1,7 @@
 package vn.edu.tlu.msv2051063778;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +51,19 @@ public class MyArrayAdapter extends RecyclerView.Adapter<MyArrayAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Đã đặt: " + myItem.getTenMon(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        // Xử lý sự kiện khi nhấn vào imgMon
+        holder.imgMon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ItemDetailActivity.class);
+                intent.putExtra("tenMon", myItem.getTenMon());
+                intent.putExtra("giaMon", myItem.getDonGia());
+                intent.putExtra("moTa", myItem.getMoTa());
+                intent.putExtra("imgResId", resId);
+                intent.putExtra("moTa", myItem.getMoTa());
+                context.startActivity(intent);
             }
         });
     }

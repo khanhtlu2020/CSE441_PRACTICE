@@ -1,14 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="8dp"
-    android:gravity="center_vertical">
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/imgMon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
         android:scaleType="centerCrop"
         android:src="@android:drawable/checkbox_off_background" />
@@ -24,16 +25,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Americano"
-            android:textSize="16sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txtGiaMon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="49.000 đ"
-            android:textSize="14sp"
-            android:textColor="@android:color/darker_gray" />
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <Button
